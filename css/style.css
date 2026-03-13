@@ -125,9 +125,13 @@ padding:15px 30px;
 background:#00e5ff;
 color:black;
 text-decoration:none;
+margin-top:20px;
+
 }
 .lang-switch{
 display:flex;
+left:60%;
+transform:translateX(-60%);
 align-items:center;
 gap:8px;
 }
@@ -164,3 +168,5 @@ background:#00e5ff;
 input:checked + .slider:before{
 transform:translateX(20px);
 }
+.cv{padding:120px 20px;
+text-align:center;}
