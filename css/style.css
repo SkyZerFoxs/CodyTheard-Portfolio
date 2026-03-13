@@ -1,43 +1,27 @@
 
-.switch{
-position:relative;
-display:inline-block;
-width:40px;
-height:20px;
-}
-
-.switch input{display:none}
-
-.slider{
-position:absolute;
-cursor:pointer;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:#555;
-transition:.3s;
-border-radius:20px;
-}
-
-.slider:before{
-position:absolute;
-content:"";
-height:16px;
-width:16px;
-left:2px;
-bottom:2px;
-background:white;
-transition:.3s;
-border-radius:50%;
-}
-
-input:checked + .slider{
+padding:14px 30px;
 background:#00e5ff;
+color:black;
+text-decoration:none;
 }
 
-input:checked + .slider:before{
-transform:translateX(20px);
+.skills{
+padding:120px 20px;
+text-align:center;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.skill-card{
+background:#111;
+padding:25px;
+border-radius:10px;
 }
 
 .categories{
@@ -53,26 +37,37 @@ justify-content:center;
 font-size:40px;
 background-size:cover;
 background-position:center;
-text-decoration:none;
-color:white;
-transition:0.3s;
+transition:0.4s;
 }
 
 .category:hover{
 transform:scale(1.05);
 }
 
-.project{
+.project-card{
 max-width:900px;
 margin:auto;
 padding:40px;
 }
 
+.project-media iframe{
+width:100%;
+height:400px;
+}
+
+.timeline{
+padding:120px 20px;
+text-align:center;
+}
+
+.timeline-item{
+max-width:600px;
+margin:auto;
+}
+
 .download{
 display:inline-block;
-margin-top:20px;
 padding:15px 30px;
 background:#00e5ff;
 color:black;
-text-decoration:none;
 }
