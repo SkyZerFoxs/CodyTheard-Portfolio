@@ -5,9 +5,7 @@ function setLanguage(lang){
 
 const elements = document.querySelectorAll("[data-en]")
 
-
-
-for(let el of elements){
+for(const el of elements){
 
 el.textContent = el.getAttribute(`data-${lang}`)
 
@@ -17,32 +15,24 @@ localStorage.setItem("lang",lang)
 
 }
 
-
-
 const savedLang = localStorage.getItem("lang") || "en"
+
+if(toggle){
+
+if(savedLang === "en") toggle.checked = true
+
+}
 
 setLanguage(savedLang)
 
-
-
-if(savedLang === "en"){
-
-toggle.checked = true
-
-}
-
-
+if(toggle){
 
 toggle.addEventListener("change",()=>{
 
-if(toggle.checked){
+if(toggle.checked) setLanguage("en")
 
-setLanguage("en")
-
-}else{
-
-setLanguage("fr")
-
-}
+else setLanguage("fr")
 
 })
+
+}
