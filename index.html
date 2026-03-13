@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Cody Theard | Gameplay Programmer</title>
 
 <link rel="stylesheet" href="css/style.css">
+
+<script defer src="js/lang.js"></script>
 
 </head>
 
@@ -17,12 +19,31 @@
 
 <div class="logo">Cody Theard</div>
 
-<ul>
-<li><a href="index.html">Accueil</a></li>
-<li><a href="projects.html">Projets</a></li>
-<li><a href="cv.html">CV</a></li>
-<li><a href="contact.html">Contact</a></li>
+<div class="nav-right">
+
+<ul class="nav-links">
+
+<li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+<li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+<li><a href="cv.html" data-en="Resume" data-fr="CV">Resume</a></li>
+<li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+
 </ul>
+
+<div class="lang-switch">
+
+<span>FR</span>
+
+<label class="switch">
+<input type="checkbox" id="langToggle">
+<span class="slider"></span>
+</label>
+
+<span>EN</span>
+
+</div>
+
+</div>
 
 </nav>
 
@@ -32,26 +53,8 @@
 
 <h1>Cody Theard</h1>
 
-<h2>Gameplay Programmer</h2>
+<h2 data-en="Gameplay Programmer" data-fr="Programmeur Gameplay">
+Gameplay Programmer
+</h2>
 
-<p>
-Computer Science graduate from Le Mans University.
-
-Self‑taught Unreal Engine developer working with Blueprint and gameplay systems.
-
-Currently developing multiple gameplay prototypes.
-
-</p>
-
-<p class="engine-years">
-Working with Unreal Engine since 2024
-</p>
-
-<a class="cta" href="projects.html">See my projects</a>
-
-</div>
-
-</section>
-
-</body>
 </html>
