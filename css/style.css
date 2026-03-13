@@ -1,172 +1,329 @@
-body{
-margin:0;
-font-family:Inter,Arial;
-background:#0b0b0b;
-color:white;
+body {
+    margin: 0;
+    font-family: Inter, Arial;
+    background: #0b0b0b;
+    color: white;
 }
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 40px;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-z-index:1000;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
-.logo{
-font-weight:bold;
+
+.logo {
+    font-weight: bold;
 }
-.nav-links{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:30px;
-list-style:none;
+
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
-.nav-links a{
-color:white;
-text-decoration:none;
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
 }
-.hero{
-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hero-video{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.hero-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }
-.hero-content{
-position:relative;
-text-align:center;
-max-width:700px;
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 700px;
 }
-.hero h1{
-font-size:72px;
+
+.hero h1 {
+    font-size: 72px;
 }
-.cta{
-margin-top:20px;
-padding:14px 30px;
-background:#00e5ff;
-color:black;
-text-decoration:none;
-display:inline-block;
+
+.cta {
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #00e5ff;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
 }
-.skills{
-padding:120px 20px;
-text-align:center;
+
+.skills {
+    padding: 120px 20px;
+    text-align: center;
 }
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-max-width:900px;
-margin:auto;
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
 }
-.skill-card{
-background:#111;
-padding:25px;
-border-radius:10px;
-opacity:0;
-transform:translateY(30px);
-transition:all .6s;
+
+.skill-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .6s;
 }
-.skill-card.show{
-opacity:1;
-transform:translateY(0);
+
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
-.categories{
-display:grid;
-grid-template-columns:1fr 1fr;
-height:100vh;
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+
+    padding: 5%;
 }
-.category{
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:40px;
-background-size:cover;
-background-position:center;
-transition:.4s;
-}
-.category:hover{
-transform:scale(1.05);
-}
-.timeline{
-padding:120px 20px;
-text-align:center;
-}
-.timeline-item{
-opacity:0;
-transform:translateY(30px);
-transition:.6s;
-}
-.timeline-item.show{
-opacity:1;
-transform:translateY(0);
-}
-.download{
-display:inline-block;
-padding:15px 30px;
-background:#00e5ff;
-color:black;
-text-decoration:none;
-margin-top:20px;
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    background-size: cover;
+    background-position: center;
+    transition: .4s;
+    padding: 400px 5px;
+    text-align: center;
+
 
 }
-.lang-switch{
-display:flex;
-left:60%;
-transform:translateX(-60%);
-align-items:center;
-gap:8px;
+
+.category:hover {
+    transform: scale(1.05);
 }
-.switch{
-position:relative;
-display:inline-block;
-width:40px;
-height:20px;
+
+.timeline {
+    padding: 120px 20px;
+    text-align: center;
 }
-.switch input{display:none}
-.slider{
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:#555;
-border-radius:20px;
+
+.timeline-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .6s;
 }
-.slider:before{
-position:absolute;
-content:"";
-height:16px;
-width:16px;
-left:2px;
-bottom:2px;
-background:white;
-border-radius:50%;
-transition:.3s;
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
 }
-input:checked + .slider{
-background:#00e5ff;
+
+.download {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #00e5ff;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+
 }
-input:checked + .slider:before{
-transform:translateX(20px);
+
+.lang-switch {
+    display: flex;
+    left: 60%;
+    transform: translateX(-60%);
+    align-items: center;
+    gap: 8px;
 }
-.cv{padding:120px 20px;
-text-align:center;}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    display: none
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #555;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked+.slider {
+    background: #00e5ff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.cv {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+
+
+.projects-page {
+    padding: 120px 100px;
+    text-align: center;
+    margin: auto;
+
+}
+
+
+
+/*! Styles pour les cartes de projet et le slider */
+.project-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Slider responsive avec ratio fixe (16:9) */
+.media-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #000;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* garde la même hauteur relative quelle que soit la largeur */
+}
+
+/* container relatif qui garde la hauteur */
+.media-slider .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* chaque slide occupe toute la surface et centre son contenu */
+.media-slider .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    opacity: 0;
+    transition: opacity .35s ease;
+    z-index: 1;
+}
+
+/* slide visible */
+.media-slider .slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* forcer media à conserver les proportions et être centré (letterbox si nécessaire) */
+.media-slider img,
+.media-slider video,
+.media-slider iframe {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* important pour garder la proportion et centrer */
+    display: block;
+    border: 0;
+    background: #000;
+}
+
+/* contrôles */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    /* rendre cliquable et au-dessus des slides */
+    pointer-events: auto;
+    z-index: 20;
+}
+
+/* boutons plus visibles et accessibles */
+.slider-controls button {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.5rem 0.85rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 6px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: background .15s, transform .08s;
+}
+
+.slider-controls button:hover {
+    background: rgba(255,255,255,0.14);
+    transform: translateY(-1px);
+}
+
+.slider-controls button:active {
+    transform: translateY(0);
+}
+
+.slider-controls button:focus {
+    outline: 2px solid #00e5ff;
+    outline-offset: 2px;
+}
