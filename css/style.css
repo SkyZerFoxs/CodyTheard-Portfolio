@@ -227,7 +227,7 @@ input:checked+.slider:before {
 
 
 .projects-page {
-    padding: 120px 100px;
+    padding: 100px 100px;
     text-align: center;
     margin: auto;
 
@@ -341,3 +341,122 @@ input:checked+.slider:before {
     outline: 2px solid #00e5ff;
     outline-offset: 2px;
 }
+
+/* buttons */
+.btn-primary{ background: linear-gradient(90deg,#00e5ff,#5ad1ff); color:#041018; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700; }
+.btn-outline{ border:1px solid rgba(255,255,255,0.12); color:#ffffff; padding:9px 14px; border-radius:8px; text-decoration:none; margin-right:12px; }
+.btn-ghost{ border:1px dashed rgba(255,255,255,0.06); color:#e6f7ff; padding:8px 12px; border-radius:6px; text-decoration:none; display:inline-block; margin-right:8px; }
+
+
+.hero-actions{ margin-top:50px; }
+.hero-actions .btn-primary{ margin-right:12px; }
+
+.DescriptionGame{
+    background: rgba(255,255,255,0.02);
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+/* ---------- Unreal Blueprint page specific styles (namespace .blueprint-page) ---------- */
+.blueprint-page { padding: 100px 20px 80px; max-width:1200px; margin:0 auto; color: #eaf6ff; }
+
+.bp-header { text-align:center; margin-bottom:32px; }
+.bp-header h1 { font-size:2.2rem; margin:0 0 8px; color: #fff; }
+.bp-lead { color: #9fbfd9; margin:0 auto; max-width:820px; }
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: 1fr; /* force chaque cellule de la même ligne à avoir la même hauteur */
+  align-items: start;
+  /* si tu veux centrer la grille horizontalement : margin: 0 auto; max-width:1200px; */
+}
+
+/* project card */
+.project-card-link { text-decoration: none; color: inherit; display:block; /* remove fixed height */ }
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;   /* hauteur minimale agréable */
+  max-height: 420px;   /* empêche la carte de grandir indéfiniment */
+  overflow: hidden;    /* contenu trop long scrollera dans .card-body si nécessaire */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 6px 18px rgba(2,8,12,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* project info */
+.project-info-link { text-decoration: none; color: inherit; display:block; height:100%; }
+.project-info {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  overflow: hidden;
+  display:flex;
+  flex-direction:column;
+  /* let the card height be defined by its content */
+  min-height: 0;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 6px 18px rgba(2,8,12,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding-bottom: 20px;
+}
+
+/* image area */
+.card-media { aspect-ratio: 16/9; background:#000; flex: 0 0 auto; }
+.card-media img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* body */
+.card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;      /* prend l'espace restant dans la carte */
+  overflow: auto;      /* évite de faire grandir la carte : contenu défilable */
+}
+.card-body h2 { margin:0; font-size:1.05rem; color:#fff; }
+.card-body p { margin:0; color:#bcd8ec; font-size:0.92rem; line-height:1.3; }
+
+/* footer/CTA dans la carte : pousse en bas */
+.card-footer { margin-top: auto; }
+
+/* hover/focus */
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(3,10,18,0.6);
+  border-color: rgba(90,200,255,0.08);
+}
+
+/* responsive tweaks */
+@media (max-width:760px) {
+  .blueprint-page { padding: 84px 14px 60px; }
+  .bp-header h1 { font-size:1.7rem; }
+  .card-body p { font-size:0.95rem; }
+}
+@media (max-width: 1000px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+.preserve-whitespace {
+  white-space: pre-wrap; /* respecte les retours à la ligne et les espaces */
+  word-wrap: break-word;
+  line-height: 1.45;
+}
+
+/* keep page-specific rules isolated */
+
+.meta{ color:#9fbfd9; margin-top:12px; font-size:0.95rem; }

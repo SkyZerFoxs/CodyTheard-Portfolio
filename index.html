@@ -1,80 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cody Theard | Developpeur Jeux vidéo</title>
-<link rel="stylesheet" href="css/style.css">
-<script defer src="js/lang.js"></script>
-<script defer src="js/animations.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody Theard | Développeur Jeux vidéo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/lang.js"></script>
+    <script defer src="js/animations.js"></script>
 
 </head>
-<body>
-<nav class="navbar">
-<div class="logo">Cody Theard</div>
-<ul class="nav-links">
-<li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
-<li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
-<li><a href="cv.html" data-en="Resume" data-fr="CV">Resume</a></li>
-<li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
-</ul>
-<div class="lang-switch">
-<span>FR</span>
-<label class="switch">
-<input type="checkbox" id="langToggle">
-<span class="slider"></span>
-</label>
-<span>EN</span>
-</div>
-</nav>
-<section class="hero">
-<video autoplay muted loop class="hero-video">
-<source src="assets/videos/BackgroundProto.mp4" type="video/mp4">
-</video>
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<h1>Cody Theard</h1>
-<h2 data-en="Game Developer" data-fr="Developpeur Jeux vidéo">
-Gameplay Programmer
-</h2>
-<p
-data-en="Self-taught developer on Unreal Engine using Blueprints since October 2024. Unity and C++ since October 2025"
-data-fr="Développeur en autodidacte sur Unreal engine en blueprint depuis octobre 2024. Unity et C++ depuis octobre 2025"
->
-Self-taught developer on Unreal Engine using Blueprints since October 2024. Unity and C++ since October 2025
-</p>
 
-<a class="cta" href="projects.html"
-data-en="Explore my projects"
-data-fr="Découvrir mes projets"
->
-Explore my projects
-</a>
-</div>
-</section>
-<section class="skills"><h2 data-en="Skills" data-fr="Compétences">Skills</h2>
-<div class="skills-grid">
-<div class="skill-card">Unreal Engine 5</div>
-<div class="skill-card">Gameplay Programming</div>
-<div class="skill-card">Blueprint</div>
-<div class="skill-card">C++</div>
-<div class="skill-card">Unity</div>
-<div class="skill-card">C#</div>
-<div class="skill-card">Game Prototyping</div>
-<div class="skill-card">Blender</div>
-</div>
-</section>
-<section class="timeline">
-<h2 data-en="Experience" data-fr="Expérience">Experience</h2>
-<div class="timeline-item">
-<h3>Octobre 2024</h3>
-<p
-data-en="Beginning the development of gameplay prototypes on Unreal Engine through self-teaching"
-data-fr="Début du développement de prototypes de gameplay sur Unreal Engine en autodidacte"
->
-Beginning the development of gameplay prototypes on Unreal Engine through self-teaching
-</p>
-</div>
-</section>
+<body>
+    <nav class="navbar">
+        <div class="logo">Cody Theard</div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="cv.html" data-en="Resume" data-fr="CV">Resume</a></li>
+            <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+            <span>FR</span>
+            <label class="switch">
+                <input type="checkbox" id="langToggle">
+                <span class="slider"></span>
+            </label>
+            <span>EN</span>
+        </div>
+    </nav>
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="assets/videos/BackgroundProto.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Cody Theard</h1>
+            <h2 data-en="Game Developer" data-fr="Développeur Jeux vidéo">
+                Gameplay Programmer
+            </h2>
+            <p data-en="Self-taught developer on Unreal Engine using Blueprints since October 2024. Unity and C++ since October 2025"
+                data-fr="Développeur en autodidacte sur Unreal engine en blueprint depuis octobre 2024. Unity et C++ depuis octobre 2025">
+                Self-taught developer on Unreal Engine using Blueprints since October 2024. Unity and C++ since October
+                2025
+            </p>
+
+            <a class="cta" href="projects.html" data-en="Explore my projects" data-fr="Découvrir mes projets">
+                Explore my projects
+            </a>
+        </div>
+    </section>
+
+    <!-- NOUVEAU : section Projet actuellement en cours -->
+    <section class="current-project" style="padding:40px 20px; max-width:1200px; margin:0 auto;">
+        <h2 data-en="Current project" data-fr="Projet actuellement en cours">Projet actuellement en cours</h2>
+
+        <div class="project-card" style="margin-top:18px;">
+            <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div class="media-slider" style="flex:1 1 560px; max-width:720px;">
+                    <div class="slides">
+                        <div class="slide active">
+                            <!-- vidéo (clip du prototype) -->
+                            <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;">
+                                <source src="assets/videos/Oxya2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="slide">
+                            <!-- screenshot / image -->
+                            <img src="assets/images/pokeball1.png" alt="Screenshot prototype 1">
+                        </div>
+
+                        <div class="slide">
+                            <img src="assets/images/current-project-screenshot2.jpg" alt="Screenshot prototype 2">
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="prev" aria-label="Précédent">‹</button>
+                        <button class="next" aria-label="Suivant">›</button>
+                    </div>
+                </div>
+
+                <div style="flex:1 1 320px; min-width:260px;">
+                    <h3 data-en="Oxya" data-fr="Oxya">Oxya</h3>
+                    <p data-en="A combat prototype focusing on enemy behavior, telegraphed attacks and tight player controls."
+                        data-fr="Oxya est un jeu de survie complet développé sous Unreal Engine. Le joueur évolue dans un environnement hostile dominé par un immense dôme, entre forêt et lac, tout en faisant face à des menaces environnementales.">
+                        Prototype de combat centré sur le comportement des ennemis, attaques télégraphiées et contrôles
+                        précis.
+                    </p>
+
+                    <p style="margin-top:12px;" data-en="Tech: Unreal Engine (Blueprints), animation, AI"
+                        data-fr="Tech : Unreal Engine (Blueprints), animation, IA">
+                        Tech : Unreal Engine (Blueprints), Blender (animation, modélisation), IA
+                    </p>
+
+                    <a class="cta" href="categories/Blueprint/unreal-blueprint.html" data-en="Open project page"
+                        data-fr="Voir la page du projet" style="display:inline-block;margin-top:12px;">
+                        Voir la page du projet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIN section Projet -->
+
+    <section class="skills">
+        <h2 data-en="Skills" data-fr="Compétences">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Unreal Engine 5</div>
+            <div class="skill-card">Gameplay Programming</div>
+            <div class="skill-card">Blueprint</div>
+            <div class="skill-card">C++</div>
+            <div class="skill-card">Unity</div>
+            <div class="skill-card">C#</div>
+            <div class="skill-card">Game Prototyping</div>
+            <div class="skill-card">Blender</div>
+        </div>
+    </section>
+    <section class="timeline">
+        <h2 data-en="Experience" data-fr="Expérience">Experience</h2>
+        <div class="timeline-item">
+            <h3>Octobre 2024</h3>
+            <p data-en="Beginning the development of gameplay prototypes on Unreal Engine through self-teaching"
+                data-fr="Début du développement de prototypes de gameplay sur Unreal Engine en autodidacte">
+                Beginning the development of gameplay prototypes on Unreal Engine through self-teaching
+            </p>
+        </div>
+    </section>
 </body>
+
 </html>

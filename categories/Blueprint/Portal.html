@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oxya — Projet | Cody Theard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="../../js/lang.js"></script>
+    <script defer src="../../js/animations.js"></script>
+    <script defer src="../../js/slider.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Cody Theard</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="../../projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="../../categories/Blueprint/unreal-blueprint.html" data-en="Blueprints"
+                    data-fr="Blueprints">Blueprints</a></li>
+            <li><a href="../../contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+
+        <div class="lang-switch">
+            <span id="langFR">FR</span>
+            <label class="switch">
+                <input type="checkbox" id="langToggle">
+                <span class="slider"></span>
+            </label>
+            <span id="langEN">EN</span>
+        </div>
+    </nav>
+
+    <section class="projects-page">
+        <!----Oxya Prototype-->
+        <div class="project-info">
+            <div class="DescriptionGame">
+                <h1>Portal Prototype</h1>
+                <p class="preserve-whitespace" data-en="This prototype features the iconic mechanics of Portal, allowing the player to:
+🔹Pass through portals while maintaining momentum and direction.
+🔹Send objects through portals to solve puzzles.
+🔹Interact with an initial level designed to showcase these gameplay mechanics.
+A project highlighting dynamic portal programming and object physics, with early level design that integrates these features into Unreal Engine." data-fr="Ce prototype reprend les mécaniques emblématiques de Portal, permettant au joueur de :
+🔹Traverser les portails en conservant son élan et sa direction.
+🔹Faire passer des objets à travers les portails pour résoudre des énigmes.
+🔹Interagir avec un premier niveau conçu pour exploiter ces mécaniques de gameplay.
+Un projet mettant en avant la programmation de portails dynamiques et la physique des objets, avec un début de level design intégrant ces fonctionnalités dans Unreal Engine.">
+                </p>
+            </div>
+            <div class="media-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <video src="../../assets/videos/Portal.mp4" type="video/mp4" controls></video>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/Portal1.png" alt="Portal screenshot">
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/Portal2.png" alt="Portal screenshot">
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/Portal3.png" alt="Portal screenshot">
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/Portal4.png" alt="Portal screenshot">
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="prev" aria-label="Précédent">‹</button>
+                    <button class="next" aria-label="Suivant">›</button>
+                </div>
+            </div>
+        </div>
+        <!--Fin Oxya-->
+        <div class="hero-actions">
+            <a class="btn-outline" href="../../categories/Blueprint/unreal-blueprint.html" data-en="Back to projects"
+                data-fr="Retour aux projets">Retour</a>
+        </div>
+        </main>
+
+
+</body>
+
+</html>

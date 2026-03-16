@@ -3,14 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Unreal Engine Blueprint Projects</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unreal Engine Blueprint — Projets | Cody Theard</title>
   <link rel="stylesheet" href="../../css/style.css">
   <script defer src="../../js/lang.js"></script>
   <script defer src="../../js/animations.js"></script>
-  <script defer src="../../js/slider.js"></script>
-  <style>
-    /* Styles minimalistes pour le slider */
-  </style>
 </head>
 
 <body>
@@ -23,116 +20,156 @@
       <li><a href="../../contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
     </ul>
 
-
     <div class="lang-switch">
-      <span>FR</span>
+      <span id="langFR">FR</span>
       <label class="switch">
         <input type="checkbox" id="langToggle">
         <span class="slider"></span>
       </label>
-      <span>EN</span>
+      <span id="langEN">EN</span>
     </div>
   </nav>
-  <section class="projects-page">
-    <h1>Unreal Engine Blueprint</h1>
 
-    <!-- Exemple de projet avec slider pour les médias -->
+  <main class="container blueprint-page">
+    <header class="bp-header">
+      <h1 data-en="Unreal Engine Blueprint" data-fr="Unreal Engine Blueprint">Unreal Engine Blueprint</h1>
+      <p class="bp-lead" data-en="Collection of prototypes & projects made with UE Blueprints"
+         data-fr="Collection de prototypes & projets réalisés avec les Blueprints UE">
+        Collection de prototypes & projets réalisés avec les Blueprints UE
+      </p>
+    </header>
 
-    <!----Oxya Prototype-->
-    <div class="project-card">
-      <h2>Oxya</h2>
-      <p>Oxya est un jeu de survie complet développé sous Unreal Engine. Le joueur évolue dans un environnement hostile dominé par un immense dôme, entre forêt et lac, tout en faisant face à des menaces environnementales.
-
-<br>🔹 Exploration libre d’une carte ouverte avec zones variées
-<br>🔹 Système de survie basé sur la gestion d’un gaz toxique qui envahit certaines zones
-<br>🔹 HUD évolutif affichant les informations vitales du joueur
-<br>🔹 Immersion visuelle grâce à un level design travaillé et une ambiance atmosphérique
-
-<br>🎯 Objectif du projet : créer une expérience de survie immersive en développant à la fois le gameplay, le level design, et l’interface utilisateur.
-
-<br> jeu illustre ma capacité à concevoir un projet complet, en alliant conception de systèmes de gameplay, travail visuel et optimisation des mécaniques de survie.</p>
-
-      <div class="media-slider">
-        <div class="slides">
-          <div class="slide active">
-            <video src="../../assets/videos/Oxya2.mp4" type="video/mp4" controls></video>
+    <!-- Section de projets Unreal Blueprint -->
+    <section class="projects-grid" aria-label="Projets Unreal Blueprint">
+      <!--Oxya-->
+      <a class="project-card-link" href="Oxya.html" aria-labelledby="oxya-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/CallOfDuty.png" alt="Oxya thumbnail">
           </div>
-          <div class="slide">
-            <img src="../assets/images/oxya.png" alt="Oxya screenshot">
+          <div class="card-body">
+            <h2 id="oxya-title" data-en="Oxya" data-fr="Oxya">Oxya</h2>
+            <p data-en="Survival experience with exploration, toxic gas mechanics and atmospheric level design."
+               data-fr="Jeu de survie avec exploration, mécanique de gaz toxique et level design atmosphérique.">
+              Jeu de survie avec exploration, mécanique de gaz toxique et level design atmosphérique.
+            </p>
           </div>
-          <div class="slide">
-            <img src="../assets/images/oxya.png" alt="Oxya screenshot">
+        </article>
+      </a>
+
+      <!--GTA-->
+      <a class="project-card-link" href="GTA.html" aria-labelledby="gta-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/GTA.png" alt="GTA thumbnail">
           </div>
-        </div>
-
-        <div class="slider-controls">
-          <button class="prev" aria-label="Précédent">‹</button>
-          <button class="next" aria-label="Suivant">›</button>
-        </div>
-      </div>
-    </div>
-      <!--Fin Oxya-->
-
-
-      <!--GTA V Prototype-->
-      <div class="project-card">
-        <h2>GTA V Prototype</h2>
-        <p>Ce prototype est une démonstration de gameplay en monde ouvert, permettant au joueur de : Conduire différents
-          véhicules dans un environnement urbain.
-          Se déplacer librement pour explorer les environs.
-          Expérimenter des mécaniques de tir dans un espace ouvert.
-          Créé avec Unreal Engine et Blueprint, ce projet met en avant mes compétences en développement de mécaniques
-          interactives et en conception d'environnements immersifs. Bien qu'encore à l'état de prototype, il reflète mon
-          intérêt pour les jeux en monde ouvert et mon envie de développer des systèmes de gameplay variés.</p>
-
-        <div class="media-slider">
-          <div class="slides">
-            <div class="slide active">
-              <video src="../../assets/videos/GTA.mp4" type="video/mp4" controls></video>
-            </div>
-            <div class="slide">
-              <img src="../../assets/images/GTA.png" alt="GTA V screenshot">
-            </div>
+          <div class="card-body">
+            <h2 id="gta-title" data-en="GTA V Prototype" data-fr="Prototype GTA V">Prototype GTA V</h2>
+            <p data-en="Open world driving & shooting prototype built with Blueprints."
+               data-fr="Prototype monde ouvert : conduite & mécaniques de tir, réalisé en Blueprints.">
+              Prototype monde ouvert : conduite & mécaniques de tir, réalisé en Blueprints.
+            </p>
           </div>
+        </article>
+      </a>
 
-          <div class="slider-controls">
-            <button class="prev" aria-label="Précédent">‹</button>
-            <button class="next" aria-label="Suivant">›</button>
+      <!--Portal-->
+      <a class="project-card-link" href="Portal.html" aria-labelledby="portal-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/Portal2.png" alt="Portal thumbnail">
           </div>
-        </div>
-      </div>
-        <!--Fin GTA V-->
-
-        <!--Portal Prototype-->
-        <div class="project-card">
-          <h2>Portal Prototype</h2>
-          <p>Portails fonctionnels avec téléportation des objets et du joueur.</p>
-
-          <div class="media-slider">
-            <div class="slides">
-              <div class="slide active">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID2" title="Portal demo" allowfullscreen></iframe>
-              </div>
-              <div class="slide">
-                <img src="../assets/images/portal.png" alt="Portal screenshot">
-              </div>
-              <div class="slide">
-                <img src="../assets/images/portal.png" alt="Portal screenshot">
-              </div>
-            </div>
-
-            <div class="slider-controls">
-              <button class="prev" aria-label="Précédent">‹</button>
-              <button class="next" aria-label="Suivant">›</button>
-            </div>
+          <div class="card-body">
+            <h2 id="portal-title" data-en="Portal Prototype" data-fr="Prototype Portails">Prototype Portails</h2>
+            <p data-en="Functional portals with object and player teleportation."
+               data-fr="Portails fonctionnels avec téléportation d'objets et du joueur.">
+              Portails fonctionnels avec téléportation d'objets et du joueur.
+            </p>
           </div>
-        </div>
-          <!--Fin Portal-->
+        </article>
+      </a>
 
+      
+       <a class="project-card-link" href="COD.html" aria-labelledby="COD-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/CallOfDuty4.png" alt="Portal thumbnail">
+          </div>
+          <div class="card-body">
+            <h2 id="portal-title" data-en="Call of Duty" data-fr="Call of Duty">Call of Duty</h2>
+            <p data-en="Call of Duty style Zombie wave survival prototype with weapon mechanics and enemy AI."
+               data-fr="Prototype de survie en vagues de zombies dans le style Call of Duty avec mécaniques d'armes et IA ennemie.">
+              Prototype de survie en vagues de zombies dans le style Call of Duty avec mécaniques d'armes et IA ennemie.
+            </p>
+          </div>
+        </article>
+      </a>
 
-  </section>
+      <a class="project-card-link" href="Satisfactory.html" aria-labelledby="Satisfactory-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/Satisfactory1.png" alt="Satisfactory thumbnail">
+          </div>
+          <div class="card-body">
+            <h2 id="Satisfactory-title" data-en="Satisfactory Prototype" data-fr="Prototype Satisfactory">Prototype Satisfactory</h2>
+            <p data-en="Satisfactory-inspired automation prototype with resource management and production flow optimization."
+               data-fr="Prototype d'automatisation inspiré de Satisfactory avec gestion des ressources et optimisation des flux de production.">
+              Prototype d'automatisation inspiré de Satisfactory avec gestion des ressources et optimisation des flux de production.
+            </p>
+          </div>
+        </article>
+      </a>
 
+      <a class="project-card-link" href="Portal.html" aria-labelledby="portal-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/Portal2.png" alt="Portal thumbnail">
+          </div>
+          <div class="card-body">
+            <h2 id="portal-title" data-en="Portal Prototype" data-fr="Prototype Portails">Prototype Portails</h2>
+            <p data-en="Functional portals with object and player teleportation."
+               data-fr="Portails fonctionnels avec téléportation d'objets et du joueur.">
+              Portails fonctionnels avec téléportation d'objets et du joueur.
+            </p>
+          </div>
+        </article>
+      </a>
 
+      <a class="project-card-link" href="Portal.html" aria-labelledby="portal-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/Portal2.png" alt="Portal thumbnail">
+          </div>
+          <div class="card-body">
+            <h2 id="portal-title" data-en="Portal Prototype" data-fr="Prototype Portails">Prototype Portails</h2>
+            <p data-en="Functional portals with object and player teleportation."
+               data-fr="Portails fonctionnels avec téléportation d'objets et du joueur.">
+              Portails fonctionnels avec téléportation d'objets et du joueur.
+            </p>
+          </div>
+        </article>
+      </a>
+      
+
+      <!-- Ajoute d'autres cards ici en copiant le modèle
+      
+      <a class="project-card-link" href="Portal.html" aria-labelledby="portal-title">
+        <article class="project-card">
+          <div class="card-media">
+            <img src="../../assets/images/Portal2.png" alt="Portal thumbnail">
+          </div>
+          <div class="card-body">
+            <h2 id="portal-title" data-en="Portal Prototype" data-fr="Prototype Portails">Prototype Portails</h2>
+            <p data-en="Functional portals with object and player teleportation."
+               data-fr="Portails fonctionnels avec téléportation d'objets et du joueur.">
+              Portails fonctionnels avec téléportation d'objets et du joueur.
+            </p>
+          </div>
+        </article>
+      </a>
+      -->
+    </section>
+  </main>
 </body>
 
 </html>
