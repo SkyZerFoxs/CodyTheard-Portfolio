@@ -8,31 +8,78 @@
 </head>
 <body>
 <nav class="navbar">
-<div class="logo">Cody Theard</div>
-<ul class="nav-links">
-<li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
-<li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
-<li><a href="cv.html" data-en="Resume" data-fr="CV">CV</a></li>
-<li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
-</ul>
-<div class="lang-switch">
-<span>FR</span>
-<label class="switch">
-<input type="checkbox" id="langToggle">
-<span class="slider"></span>
-</label>
-<span>EN</span>
-</div>
+  <div class="logo">Cody Theard</div>
+  <ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+    <li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+    <li><a href="cv.html" data-en="Resume" data-fr="CV">CV</a></li>
+    <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+  </ul>
+  <div class="lang-switch">
+    <span>FR</span>
+    <label class="switch">
+      <input type="checkbox" id="langToggle">
+      <span class="slider"></span>
+    </label>
+    <span>EN</span>
+  </div>
 </nav>
-<section class="contact">
-<h1>Contact</h1>
-<p>Email : your@email.com</p>
-<p>Phone : +33 X XX XX XX XX</p>
-<div class="socials">
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="#">YouTube</a>
-</div>
+
+<section class="contact" style="padding-top:120px; text-align:center;">
+  <h1>Contact</h1>
+
+  <!-- Email cliquable : copie l'adresse dans le presse-papier -->
+  <p>Email : 
+    <a id="emailCopy" href="#" data-email="cody.theard1@gmail.com" 
+       title="Cliquer pour copier l'email" style="color:#00e5ff; cursor:pointer;">
+      cody.theard1@gmail.com
+    </a>
+    <span id="copyMsg" aria-live="polite" style="margin-left:8px;"></span>
+  </p>
+
+  <!-- Téléphone non cliquable -->
+  <p>Téléphone : <span>06 02 22 37 00</span></p>
+
+  <div class="socials" aria-label="Réseaux sociaux" style="margin-top:18px; display:flex; gap:18px; justify-content:center; align-items:center;">
+    <a class="social-link" href="https://github.com/SkyZerFoxs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <img src="assets/icon/GithubLogo.png" alt="GitHub" style="width:48px;height:48px;object-fit:contain;display:block;">
+    </a>
+
+    <a class="social-link" href="https://www.linkedin.com/in/cody-theard-576739301/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <img src="assets/icon/LinkedInLogo.png" alt="LinkedIn" style="width:48px;height:48px;object-fit:contain;display:block;">
+    </a>
+
+    <a class="social-link" href="https://www.youtube.com/channel/TA-COMMANDER" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <img src="assets/icon/YouTubeLogo.png" alt="YouTube" style="width:48px;height:48px;object-fit:contain;display:block;">
+    </a>
+  </div>
 </section>
+
+<script>
+  // copie l'email dans le presse-papier et affiche un message temporaire
+  (function(){
+    const btn = document.getElementById('emailCopy');
+    const msg = document.getElementById('copyMsg');
+    if(!btn) return;
+
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const email = btn.dataset.email;
+      try {
+        await navigator.clipboard.writeText(email);
+        msg.textContent = 'Copié !';
+        setTimeout(()=> msg.textContent = '', 1800);
+      } catch (err) {
+        // fallback : prompt pour permettre la copie manuelle
+        const fallback = window.prompt('Copiez cette adresse e-mail', email);
+        if (fallback !== null) {
+          msg.textContent = 'Copié !';
+          setTimeout(()=> msg.textContent = '', 1800);
+        }
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
