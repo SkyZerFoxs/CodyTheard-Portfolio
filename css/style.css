@@ -589,3 +589,34 @@ input:checked+.slider:before {
   .info-column { order: 2; }
   .media-column { order: 1; }
 }
+
+/* contact page styles (scoped, minimal) */
+.contact {
+  /* card principal */
+  padding: 36px;
+  max-width: 820px;
+  margin: 40px auto;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.377), rgba(255, 255, 255, 0.349));
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 36px rgba(2,8,18,0.55);
+  color: #eaf6ff;
+  margin-top: 100px;
+}
+.contact .contact-info { max-width: 760px; margin: 0 auto 18px; color: #cfeafc; }
+.contact .contact-info p { margin: 10px 0; font-size: 1rem; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; }
+.email-btn { background: transparent; border: none; color: #00e5ff; cursor: pointer; font: inherit; padding: 6px 8px; border-radius:6px; outline: none; }
+.email-btn:hover { text-decoration: underline; }
+.copy-msg { margin-left:8px; color:#9ef; min-width:60px; display:inline-block; }
+.phone-number { color:#bcd8ec; }
+
+/* socials */
+.socials { display:flex; gap:18px; justify-content:center; align-items:center; margin-top:8px; }
+.socials .social-link img { width:48px; height:48px; object-fit:contain; display:block; }
+
+/* responsive */
+@media (max-width:640px) {
+  .contact { padding-top:84px; }
+  .contact .contact-info p { font-size:0.96rem; }
+  .socials .social-link img { width:42px; height:42px; }
+}

@@ -1,113 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css">
-<script defer src="js/lang.js"></script>
-<script defer src="js/animations.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact | Cody Theard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/lang.js"></script>
+  <script defer src="js/animations.js"></script>
+  <script defer src="js/contact.js"></script>
 </head>
 <body>
-<nav class="navbar">
-  <div class="logo">Cody Theard</div>
-  <ul class="nav-links">
-    <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
-    <li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
-    <li><a href="cv.html" data-en="Resume" data-fr="CV">CV</a></li>
-    <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
-  </ul>
-  <div class="lang-switch">
-    <span id="langFR">FR</span>
-    <label class="switch">
-      <input type="checkbox" id="langToggle">
-      <span class="slider"></span>
-    </label>
-    <span id="langEN">EN</span>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="logo">Cody Theard</div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+      <li><a href="projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+      <li><a href="cv.html" data-en="Resume" data-fr="CV">CV</a></li>
+      <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+    </ul>
 
-<section class="contact" style="padding-top:120px; text-align:center;">
-  <h1 data-en="Contact" data-fr="Contact">Contact</h1>
+    <div class="lang-switch">
+      <span id="langFR">FR</span>
+      <label class="switch">
+        <input type="checkbox" id="langToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="langEN">EN</span>
+    </div>
+  </nav>
 
-  <!-- Email cliquable : copie l'adresse dans le presse-papier -->
-  <p>
-    <span data-en="Email:" data-fr="Email :">Email :</span>
-    <a id="emailCopy"
-       data-email="cody.theard1@gmail.com"
-       style="color:#00e5ff; cursor:pointer; margin-left:6px; display:inline-block;">
-      cody.theard1@gmail.com
-    </a>
-    <span id="copyMsg" aria-live="polite" style="margin-left:8px;"></span>
-  </p>
+  <main class="container">
+    <section class="contact">
+      <h1 data-en="Contact" data-fr="Contact">Contact</h1>
 
-  <!-- Téléphone non cliquable, label translatable -->
-  <p>
-    <span data-en="Phone:" data-fr="Téléphone :">Téléphone :</span>
-    <span id="phoneNumber" style="margin-left:6px;">06 02 22 37 00</span>
-  </p>
+      <div class="contact-info">
+        <p>
+          <strong data-en="Email:" data-fr="Email :">Email :</strong>
+          <button id="emailCopy" class="email-btn" data-email="cody.theard1@gmail.com" aria-describedby="copyMsg"></button>
+          <span id="copyMsg" class="copy-msg" role="status" aria-live="polite"></span>
+        </p>
 
-  <div class="socials" aria-label="Réseaux sociaux" style="margin-top:18px; display:flex; gap:18px; justify-content:center; align-items:center;">
-    <a class="social-link" href="https://github.com/SkyZerFoxs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-      <img src="assets/icon/GithubLogo.png" alt="GitHub" style="width:48px;height:48px;object-fit:contain;display:block;">
-    </a>
+        <p>
+          <strong data-en="Phone:" data-fr="Téléphone :">Téléphone :</strong>
+          <span id="phoneNumber" class="phone-number">06 02 22 37 00</span>
+        </p>
+      </div>
 
-    <a class="social-link" href="https://www.linkedin.com/in/cody-theard-576739301/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <img src="assets/icon/LinkedInLogo.png" alt="LinkedIn" style="width:48px;height:48px;object-fit:contain;display:block;">
-    </a>
+      <div class="socials" aria-label="Réseaux sociaux">
+        <a class="social-link" href="https://github.com/SkyZerFoxs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="assets/icon/GithubLogo.png" alt="GitHub">
+        </a>
 
-    <a class="social-link" href="https://www.youtube.com/channel/TA-COMMANDER" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-      <img src="assets/icon/YouTubeLogo.png" alt="YouTube" style="width:48px;height:48px;object-fit:contain;display:block;">
-    </a>
-  </div>
-</section>
+        <a class="social-link" href="https://www.linkedin.com/in/cody-theard-576739301/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="assets/icon/LinkedInLogo.png" alt="LinkedIn">
+        </a>
 
-<script>
-  (function(){
-    const btn = document.getElementById('emailCopy');
-    const msg = document.getElementById('copyMsg');
-    if(!btn) return;
-
-    // récupère la langue de façon robuste (plusieurs clés / fallback sur toggle)
-    function getLang(){
-      return localStorage.getItem('lang')
-          || localStorage.getItem('LANG')
-          || localStorage.getItem('cvLang')
-          || (document.getElementById('langToggle') && document.getElementById('langToggle').checked ? 'en' : 'fr')
-          || 'en';
-    }
-
-    function texts(lang){
-      return {
-        copied: lang === 'fr' ? 'Copié !' : 'Copied!',
-        };
-    }
-
-    
-
-    // observe les changements localStorage (quand l'utilisateur change la langue sur une autre page)
-    window.addEventListener('storage', (e) => {
-      if(e.key === 'lang' || e.key === 'cvLang') updateTitles();
-    });
-
-    btn.addEventListener('click', async (e) => {
-      e.preventDefault();
-      const email = btn.dataset.email;
-      const lang = getLang();
-      const t = texts(lang);
-
-      try {
-        await navigator.clipboard.writeText(email);
-        msg.textContent = t.copied;
-        setTimeout(()=> msg.textContent = '', 1800);
-      } catch (err) {
-        const fallback = window.prompt(t.prompt, email);
-        if (fallback !== null) {
-          msg.textContent = t.copied;
-          setTimeout(()=> msg.textContent = '', 1800);
-        }
-      }
-    });
-  })();
-</script>
-
+        <a class="social-link" href="https://www.youtube.com/channel/TA-COMMANDER" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <img src="assets/icon/YouTubeLogo.png" alt="YouTube">
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
