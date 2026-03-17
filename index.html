@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/lang.js"></script>
     <script defer src="js/animations.js"></script>
+    <script defer src="js/slider.js"></script>
+
 
 </head>
 
@@ -52,56 +54,61 @@
     </section>
 
     <!-- NOUVEAU : section Projet actuellement en cours -->
-    <section class="current-project" style="padding:40px 20px; max-width:1200px; margin:0 auto;">
+    <section class="current-project">
+      <div class="container">
         <h2 data-en="Current project" data-fr="Projet actuellement en cours">Projet actuellement en cours</h2>
 
-        <div class="project-card" style="margin-top:18px;">
-            <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
-                <div class="media-slider" style="flex:1 1 560px; max-width:720px;">
-                    <div class="slides">
-                        <div class="slide active">
-                            <!-- vidéo (clip du prototype) -->
-                            <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;">
-                                <source src="assets/videos/Oxya2.mp4" type="video/mp4">
-                            </video>
-                        </div>
+        <article class="project-card current-card">
+          <div class="current-grid">
+            <div class="media-column">
+              <div class="media-slider js-slider">
+                <div class="slides">
 
-                        <div class="slide">
-                            <!-- screenshot / image -->
-                            <img src="assets/images/pokeball1.png" alt="Screenshot prototype 1">
-                        </div>
-
-                        <div class="slide">
-                            <img src="assets/images/current-project-screenshot2.jpg" alt="Screenshot prototype 2">
-                        </div>
+                   <div class="slide active">
+                        <video src="assets/videos/oxya1.mp4" type="video/mp4" controls></video>
                     </div>
-
-                    <div class="slider-controls">
-                        <button class="prev" aria-label="Précédent">‹</button>
-                        <button class="next" aria-label="Suivant">›</button>
+                    <div class="slide">
+                        <video src="assets/videos/OxyaJourNuit.mp4" type="video/mp4" controls></video>
+                    </div>
+                    <div class="slide">
+                        <video src="assets/videos/OxyaMap.mp4" type="video/mp4" controls></video>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/OXYA.png" alt="Oxya screenshot">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/OXYA2.png" alt="Oxya screenshot">
                     </div>
                 </div>
 
-                <div style="flex:1 1 320px; min-width:260px;">
-                    <h3 data-en="Oxya" data-fr="Oxya">Oxya</h3>
-                    <p data-en="A combat prototype focusing on enemy behavior, telegraphed attacks and tight player controls."
-                        data-fr="Oxya est un jeu de survie complet développé sous Unreal Engine. Le joueur évolue dans un environnement hostile dominé par un immense dôme, entre forêt et lac, tout en faisant face à des menaces environnementales.">
-                        Prototype de combat centré sur le comportement des ennemis, attaques télégraphiées et contrôles
-                        précis.
-                    </p>
-
-                    <p style="margin-top:12px;" data-en="Tech: Unreal Engine (Blueprints), animation, AI"
-                        data-fr="Tech : Unreal Engine (Blueprints), animation, IA">
-                        Tech : Unreal Engine (Blueprints), Blender (animation, modélisation), IA
-                    </p>
-
-                    <a class="cta" href="categories/Blueprint/unreal-blueprint.html" data-en="Open project page"
-                        data-fr="Voir la page du projet" style="display:inline-block;margin-top:12px;">
-                        Voir la page du projet
-                    </a>
+                <div class="slider-controls">
+                  <button class="prev" aria-label="Précédent">‹</button>
+                  <button class="next" aria-label="Suivant">›</button>
                 </div>
+              </div>
             </div>
-        </div>
+
+            <div class="info-column">
+              <h3 data-en="Oxya" data-fr="Oxya">Oxya</h3>
+
+              <p class="preserve-whitespace"
+                 data-en="Oxya is a complete survival game developed in Unreal Engine. The player navigates a hostile environment dominated by a massive dome, between forest and lake, while facing environmental threats."
+                 data-fr="Oxya est un jeu de survie complet développé sous Unreal Engine. Le joueur évolue dans un environnement hostile dominé par un immense dôme, entre forêt et lac, tout en faisant face à des menaces environnementales.">
+                Oxya est un jeu de survie complet développé sous Unreal Engine. Le joueur évolue dans un environnement hostile dominé par un immense dôme, entre forêt et lac, tout en faisant face à des menaces environnementales.
+              </p>
+
+              <p class="meta" data-en="Tech: Unreal Engine (Blueprints), animation, AI"
+                 data-fr="Tech : Unreal Engine (Blueprints), animation, IA">
+                Tech : Unreal Engine (Blueprints), Blender (modélisation, animation)
+              </p>
+
+              <div class="project-actions">
+                <a class="cta" href="categories/Blueprint/Oxya.html" data-en="Open project page" data-fr="Voir la page du projet">Voir la page du projet</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
     <!-- FIN section Projet -->
 
@@ -119,14 +126,21 @@
         </div>
     </section>
     <section class="timeline">
-        <h2 data-en="Experience" data-fr="Expérience">Experience</h2>
-        <div class="timeline-item">
-            <h3>Octobre 2024</h3>
-            <p data-en="Beginning the development of gameplay prototypes on Unreal Engine through self-teaching"
-                data-fr="Début du développement de prototypes de gameplay sur Unreal Engine en autodidacte">
-                Beginning the development of gameplay prototypes on Unreal Engine through self-teaching
-            </p>
-        </div>
+        <h2 data-en="Professional Experience" data-fr="Expérience Professionnelle">Experience</h2>
+         <!-- Première expérience avec logo placé SOUS la description -->
+    <div class="timeline-item with-logo logo-below">
+      <div class="timeline-content">
+        <h3 data-en="Internship at Novark Entertainment - June 2025 - August 2025" data-fr="Stage/Immersion chez Novark Entertainment - Juin 2025-Août 2025">Stage/Immersion chez Novark Entertainment - Juin 2025‑Août 2025</h3>
+        <p data-en="Game Developer at Novark Entertainment on Unreal Engine 5: Enemy AI, combat mechanics and 2.5D movement, teamwork and use of Perforce."
+           data-fr="Développeur jeux vidéo chez Novark Entertainment sur Unreal Engine 5 : IA ennemie, mécaniques de combat et déplacements en 2.5D, travail en équipe et utilisation de Perforce.">
+           Développeur jeux vidéo chez Novark Entertainment sur Unreal Engine 5 : IA ennemie, mécaniques de combat et déplacements en 2.5D, travail en équipe et utilisation de Perforce.
+        </p>
+      </div>
+
+      <a class="studio-link" href="https://www.novarkentertainment.com/home" target="_blank" rel="noopener noreferrer" aria-label="Novark Entertainment">
+        <img src="assets/images/NovarkLogo.png" alt="Novark Entertainment logo">
+      </a>
+    </div>
     </section>
 </body>
 
