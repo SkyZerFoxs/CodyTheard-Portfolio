@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oxya — Projet | Cody Theard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="../../js/lang.js"></script>
+    <script defer src="../../js/animations.js"></script>
+    <script defer src="../../js/slider.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Cody Theard</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="../../projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="../../categories/Blueprint/unreal-blueprint.html" data-en="Blueprints"
+                    data-fr="Blueprints">Blueprints</a></li>
+            <li><a href="../../contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+
+        <div class="lang-switch">
+            <span id="langFR">FR</span>
+            <label class="switch">
+                <input type="checkbox" id="langToggle">
+                <span class="slider"></span>
+            </label>
+            <span id="langEN">EN</span>
+        </div>
+    </nav>
+
+    <section class="projects-page">
+        <!----Oxya Prototype-->
+        <div class="project-info">
+            <div class="DescriptionGame">
+                <h1 data-en="Base Combat System" data-fr="Système de combat de base">Système de combat de base</h1>
+                <p class="preserve-whitespace" data-en="In this prototype built in Unreal Engine using C++, I implemented the foundations of a simple combat system:
+🔹Character movement in C++
+🔹Sword attack triggered by a player action
+🔹Health point (HP) management on a target cube
+🔹Damage system: each hit removes 1 HP
+🔹Object destruction after 5 hits (HP = 0)
+🎯 Project objective: to explore gameplay logic directly in C++, without using Blueprints, in order to strengthen my understanding of low-level programming in Unreal Engine.
+
+This prototype is a first step toward more complex mechanics (enemy management, AI, advanced combat systems).
+Prototype created in October 2025 (1 week)"
+ data-fr="Dans ce prototype réalisé sous Unreal Engine en C++, j’ai implémenté les fondations d’un système de combat simple :
+🔹Déplacement du personnage en C++
+🔹Attaque à l’épée déclenchée par une action du joueur
+🔹Gestion des points de vie (HP) sur un cube cible
+🔹Système de dégâts : chaque coup retire 1 HP
+🔹Destruction de l’objet après 5 coups (HP = 0)
+🎯 Objectif du projet : explorer la logique gameplay directement en C++, sans passer par Blueprint, afin de renforcer ma compréhension de la programmation bas niveau dans Unreal Engine.
+
+Ce prototype constitue une première étape vers des mécaniques plus complexes (gestion d’ennemis, IA, systèmes de combat évolués).
+Prototype créé en octobre 2025 (1 semaine)">
+                </p>
+                <p class="meta">
+                    Tech : Unreal Engine (C++) 
+                </p>
+            </div>
+            <div class="media-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <video src="../../assets/videos/Cpp1.mp4" type="video/mp4" controls></video>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/Cpp1.png" alt="Monster Shooter screenshot">
+                    </div>
+
+                </div>
+                
+
+                <div class="slider-controls">
+                    <button class="prev" aria-label="Précédent">‹</button>
+                    <button class="next" aria-label="Suivant">›</button>
+                </div>
+            </div>
+        </div>
+        <!--Fin Oxya-->
+        <div class="hero-actions">
+            <a class="btn-outline" href="../../categories/Cpp/unreal-cpp.html" data-en="Back to projects"
+                data-fr="Retour aux projets">Retour</a>
+        </div>
+        </main>
+
+
+</body>
+
+</html>

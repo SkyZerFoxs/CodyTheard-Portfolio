@@ -460,3 +460,45 @@ input:checked+.slider:before {
 /* keep page-specific rules isolated */
 
 .meta{ color:#9fbfd9; margin-top:12px; font-size:0.95rem; }
+/* message vide pour pages de projets sans contenu */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  min-height: 220px;
+  text-align: center;
+  gap: 12px;
+  color: #d8eefc;
+}
+
+.empty-state .empty-icon {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 6px 14px rgba(2,8,18,0.45));
+}
+
+.empty-state h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #9fbfd9;
+  font-size: 0.95rem;
+  max-width: 640px;
+}
+
+/* responsive */
+@media (max-width: 760px) {
+  .empty-state { padding: 28px 12px; min-height: 180px; }
+  .empty-state .empty-icon { width:64px; height:64px; }
+}

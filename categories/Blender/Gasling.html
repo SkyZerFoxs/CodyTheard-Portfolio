@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oxya — Projet | Cody Theard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="../../js/lang.js"></script>
+    <script defer src="../../js/animations.js"></script>
+    <script defer src="../../js/slider.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Cody Theard</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="../../projects.html" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="../../cv.html" data-en="Resume" data-fr="CV">CV</a></li>
+            <li><a href="../../contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+
+        <div class="lang-switch">
+            <span id="langFR">FR</span>
+            <label class="switch">
+                <input type="checkbox" id="langToggle">
+                <span class="slider"></span>
+            </label>
+            <span id="langEN">EN</span>
+        </div>
+    </nav>
+
+    <section class="projects-page">
+        <!----Oxya Prototype-->
+        <div class="project-info">
+            <div class="DescriptionGame">
+                <h1>Gasling</h1>
+                <p class="preserve-whitespace"
+                    data-en="Gasling is a small creature mutated by Oxya’s toxic atmosphere. Fast and aggressive, it attacks explorers in groups and harasses players in contaminated areas.
+With its cracked skin and glowing pustules, it embodies the destructive effects of the gas on the local wildlife and serves as a basic enemy to introduce the dangers of the outside world."
+                    data-fr="Gasling est une petite créature mutée par l’atmosphère toxique d’Oxya. Rapide et agressive, elle attaque les explorateurs en groupe et harcèle les joueurs dans les zones contaminées.
+Avec sa peau fissurée et ses pustules luminescentes, elle incarne les effets destructeurs du gaz sur la faune locale et sert d’ennemi de base pour introduire les dangers du monde extérieur.">
+                    
+                </p>
+                <p class="meta">
+                    Tech : Blender(Modeling, Texturing, Animation,Rendering,Shading, Rigging)
+                </p>
+            </div>
+            <div class="media-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <video src="../../assets/videos/Gasling.mp4" type="video/mp4" controls></video>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/Gasling.png" alt="Gasling screenshot">
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="prev" aria-label="Précédent">‹</button>
+                    <button class="next" aria-label="Suivant">›</button>
+                </div>
+            </div>
+        </div>
+        <!--Fin Oxya-->
+        <div class="hero-actions">
+            <a class="btn-outline" href="../../categories/Blender/blender.html" data-en="Back to projects"
+                data-fr="Retour aux projets">Retour</a>
+        </div>
+        </main>
+
+
+</body>
+
+</html>
